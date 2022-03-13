@@ -1,0 +1,32 @@
+﻿.advantages {
+  min-height: 475px;
+  padding: 75px 0 85px 0;
+  background: #f6f6f6;
+  &__items {
+    margin-top: 65px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+    color: #0d0d0d;
+  }
+  &__item {
+    width: 270px;
+    text-align: center;
+    img {
+      margin-bottom: 30px;
+    }
+    a {
+      color: $main-color;
+    }
+  }
+  &__subheader {
+    font-weight: 700;
+    font-size: 18px;
+    text-align: center;
+    color: #0d0d0d;
+    margin-bottom: 20px;
+  }
+}
