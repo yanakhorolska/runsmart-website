@@ -1,4 +1,85 @@
-﻿@media (max-width: 767px) {
+﻿@media (max-width: 991px) {
+  .advantages {
+    &__items {
+      margin-top: 35px;
+      justify-content: center;
+    }
+    &__item {
+      margin-top: 30px;
+      img {
+        margin-bottom: 30px;
+      }
+    }
+  }
+}
+@media (max-width: 767px) {
+  .header {
+    &__logo {
+      width: 250px;
+      img {
+        width: 100%;
+      }
+    }
+    &__official {
+      display: none;
+    }
+    &__contacts {
+      align-items: center;
+    }
+  }
+  .promo {
+    background: url(../img/bg.png) left (center/cover) no-repeat;
+    &__wrapper {
+      align-items: center;
+    }
+    &__header {
+      font-size: 38px;
+    }
+    &__subheader {
+      font-size: 20px;
+    }
+  }
+  .advantages {
+    &__items {
+      margin-top: 35px;
+      justify-content: center;
+    }
+    &__item {
+      margin-top: 30px;
+      img {
+        margin-bottom: 30px;
+      }
+    }
+  }
+  .consultation {
+    min-height: 600px;
+    &__descr {
+      text-align: center;
+    }
+  }
+  .feed-form {
+    width: 100%;
+    input {
+      margin-left: 20%;
+      height: 40px;
+      width: 60%;
+    }
+  }
+  .title {
+    font-size: 28px;
+    &_left {
+      font-size: 30px;
+      text-align: center;
+    }
+  }
+  .button {
+    &_submit {
+      width: 60%;
+      height: 40px;
+      font-size: 14px;
+      margin-left: 20%;
+    }
+  }
 }
 @media (max-width: 575px) {
   .header {
@@ -20,6 +101,7 @@
     }
   }
   .promo {
+    background: url(../img/bg.png) left (center/cover) no-repeat;
     &__wrapper {
       align-items: center;
       margin-top: 70px;
