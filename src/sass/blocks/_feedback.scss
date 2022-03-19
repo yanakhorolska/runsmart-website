@@ -1,0 +1,36 @@
+﻿.feedback {
+    margin-bottom: 50px;
+  
+    &__block {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: 60px;
+        img {
+            height: 169px;
+           
+        }
+    }
+    &__text{
+        width: 500px;
+    }
+    
+    &__name {
+        font-weight: 700;
+        font-size: 18px;
+        color: #0D0D0D;
+        margin-bottom: 0;
+    }
+    &__span {
+        font-weight: 500;
+        font-size: 14px;
+        color: #646464;
+    }
+    &__descr {
+        margin-top: 10px;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 25px;
+        color: #0D0D0D;
+    }
+}
