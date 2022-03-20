@@ -92,9 +92,9 @@
   .feed-form {
     width: 100%;
     input {
-      margin-left: 20%;
+      margin-left: 15%;
       height: 40px;
-      width: 60%;
+      width: 70%;
     }
   }
   .title {
@@ -106,10 +106,10 @@
   }
   .button {
     &_submit {
-      width: 60%;
+      width: 70%;
       height: 40px;
       font-size: 14px;
-      margin-left: 20%;
+      margin-left: 15%;
     }
   }
   .carousel {
@@ -151,6 +151,14 @@
     margin-top: 30px;
     text-align: center;
   }
+}
+#consultation {
+  width: 320px;
+  padding: 50px 10px 10px;
+}
+#order {
+  width: 320px;
+  padding: 40px 10px 20px;
 }
 }
 @media (max-width: 575px) {
@@ -303,7 +311,23 @@
         position: static;
         left: 0;
         transform: 0;
-        max-width: 470px;
+        max-width: 100%;
      }
+     &__social-item {
+      img {
+          width: 47px;
+      }
+    }
+  }
+  #consultation {
+    width: 280px;
+    padding: 20px 10px 20px;
+  }
+  #order {
+    width: 280px;
+    padding: 35px 10px 20px;
+  }
+  .modal__close {
+    left: 258px;
   }
 }
