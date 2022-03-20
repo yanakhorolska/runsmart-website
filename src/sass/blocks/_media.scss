@@ -291,4 +291,19 @@
       max-width: 300px;
     }
   }
+  .footer {
+    
+    background-color: $main-color;
+    position: relative;
+    max-height: 270px;
+    iframe {
+      display: none;
+    }
+    &__info {
+        position: static;
+        left: 0;
+        transform: 0;
+        max-width: 470px;
+     }
+  }
 }
