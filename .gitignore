@@ -1,3 +1,10 @@
 ﻿node_modules
 ignore.php
-mailer/phpmailer
+PHPMailerAutoload.php
+class.phpmailer.php
+class.phpmaileroauth.php
+class.phpmaileroauthgoogle.php
+class.pop3.php
+class.smtp.php
+get_oauth_token.php
+travis.phpunit.xml.dist
