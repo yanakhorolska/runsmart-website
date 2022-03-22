@@ -29,4 +29,13 @@
     color: #0d0d0d;
     margin-bottom: 20px;
   }
+  &__icon {
+    &_animated{
+      animation-name: heartbeat;
+      animation-duration: 1.5s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+      // animation: heartbeat 1.5s linear infinite;
+    }
+  } 
 }

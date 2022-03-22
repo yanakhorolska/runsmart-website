@@ -55,5 +55,131 @@ document.querySelector('.next').addEventListener('click', function () {
                 $('.overlay, #order').fadeIn('slow');
               });
           });
+
+          // validation
+          // $('#consultation form').validate({
+          //   rules: {
+          //     name: "required",
+          //     email: {
+          //       required: true,
+          //       email: true
+          //     },
+          //     phone: "required"
+          //   },
+          //   messages: {
+          //     name: "Пожалуйста, введите ваше имя",
+          //     email: {
+          //       required: "Пожалуйста, введите ваш e-mail",
+          //       email: "Введите корректный email"
+          //     },
+          //     phone: "Пожалуйста, введите ваш номер телефона"
+          //   }
+          // });
+          // $('#order form').validate({
+          //   rules: {
+          //     name: "required",
+          //     email: {
+          //       required: true,
+          //       email: true
+          //     },
+          //     phone: "required"
+          //   },
+          //   messages: {
+          //     name: "Пожалуйста, введите ваше имя",
+          //     email: {
+          //       required: "Пожалуйста, введите ваш e-mail",
+          //       email: "Введите корректный email"
+          //     },
+          //     phone: "Пожалуйста, введите ваш номер телефона"
+          //   }
+          // });
+          // $('#consultation-form').validate({
+          //   rules: {
+          //     name: "required",
+          //     email: {
+          //       required: true,
+          //       email: true
+          //     },
+          //     phone: "required"
+          //   },
+          //   messages: {
+          //     name: "Пожалуйста, введите ваше имя",
+          //     email: {
+          //       required: "Пожалуйста, введите ваш e-mail",
+          //       email: "Введите корректный email"
+          //     },
+          //     phone: "Пожалуйста, введите ваш номер телефона"
+          //   }
+          // });
+          
+          // OPTIMIZATION VALIDATE
+
+          function valideForm(form){
+            $(form).validate({
+              rules: {
+                name: "required",
+                email: {
+                  required: true,
+                  email: true
+                },
+                phone: "required"
+              },
+              messages: {
+                name: "Пожалуйста, введите ваше имя",
+                email: {
+                  required: "Пожалуйста, введите ваш e-mail",
+                  email: "Введите корректный email"
+                },
+                phone: "Пожалуйста, введите ваш номер телефона"
+              }
+        });
+      }
+
+      valideForm('#order form');
+      valideForm('#consultation-form');
+      valideForm('#consultation form');
+     
+      // mask for input phone
+      $('input[name=phone]').mask("+48 999-999-999");
+
+      // php mailer
+      $('form').submit(function(e)  {
+        // отменяет стандартное поведение браузера
+        //  - перезагрузку страницы
+        e.preventDefault();
+
+        if(!$(this).valid()){
+          return;
+        }
+
+        $.ajax({
+          // method of sending
+          type: "POST", 
+          // where i want to sending
+          url: "mailer/smart.php",
+          // what i  want to sending
+          data: $(this).serialize()
+        }).done(function() {
+          $(this).find("input").val("");
+
+          $('#consultation, #order').fadeOut();
+          $('.overlay, #thanks').fadeIn('slow');
+
+
+          $('form').trigger('reset');
+        });
+        return false;
+      });
+
+      // smooth scroll and page up
+
+      $(window).scroll(function() {
+        if ($(this).scrollTop() > 1400) {
+          $('.pageup').fadeIn();
+        } else {
+          $('.pageup').fadeOut();
+        }
+      });
+
     });
     })(jQuery);
